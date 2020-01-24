@@ -1,0 +1,95 @@
+{
+  "creator": "Yosys 0.8+319 (git sha1 db1a5ec6, gcc 7.3.0-27ubuntu1~18.04 -fPIC -Os)",
+  "modules": {
+    "FlipFlop": {
+      "attributes": {
+        "top": 1,
+        "src": "FlipFlop.v:6"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "rst": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "d": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "q": {
+          "direction": "output",
+          "bits": [ 5 ]
+        }
+      },
+      "cells": {
+        "$abc$112$auto$blifparse.cc:371:parse_blif$113": {
+          "hide_name": 1,
+          "type": "INVX1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 6 ]
+          }
+        },
+        "$auto$simplemap.cc:496:simplemap_adff$109": {
+          "hide_name": 1,
+          "type": "DFFSR",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "FlipFlop.v:13"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 4 ],
+            "Q": [ 5 ],
+            "R": [ 6 ],
+            "S": [ "1" ]
+          }
+        }
+      },
+      "netnames": {
+        "$abc$112$auto$rtlil.cc:1843:NotGate$111": {
+          "hide_name": 1,
+          "bits": [ 6 ],
+          "attributes": {
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "FlipFlop.v:7"
+          }
+        },
+        "d": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "FlipFlop.v:9"
+          }
+        },
+        "q": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "FlipFlop.v:10"
+          }
+        },
+        "rst": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "FlipFlop.v:8"
+          }
+        }
+      }
+    }
+  }
+}

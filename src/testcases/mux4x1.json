@@ -1,0 +1,287 @@
+{
+  "creator": "Yosys 0.8+319 (git sha1 db1a5ec6, gcc 7.3.0-27ubuntu1~18.04 -fPIC -Os)",
+  "modules": {
+    "mux4x1": {
+      "attributes": {
+        "top": 1,
+        "src": "verilog/mux4x1.v:1"
+      },
+      "ports": {
+        "a": {
+          "direction": "input",
+          "bits": [ 2, 3 ]
+        },
+        "b": {
+          "direction": "input",
+          "bits": [ 4, 5 ]
+        },
+        "c": {
+          "direction": "input",
+          "bits": [ 6, 7 ]
+        },
+        "d": {
+          "direction": "input",
+          "bits": [ 8, 9 ]
+        },
+        "sel": {
+          "direction": "input",
+          "bits": [ 10, 11 ]
+        },
+        "y": {
+          "direction": "output",
+          "bits": [ 12, 13 ]
+        }
+      },
+      "cells": {
+        "$abc$218$auto$blifparse.cc:371:parse_blif$219": {
+          "hide_name": 1,
+          "type": "INVX1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 10 ],
+            "Y": [ 14 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:371:parse_blif$220": {
+          "hide_name": 1,
+          "type": "NOR2X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 14 ],
+            "Y": [ 15 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:371:parse_blif$221": {
+          "hide_name": 1,
+          "type": "AND2X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 10 ],
+            "Y": [ 16 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:371:parse_blif$222": {
+          "hide_name": 1,
+          "type": "AOI22X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 15 ],
+            "C": [ 16 ],
+            "D": [ 8 ],
+            "Y": [ 17 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:371:parse_blif$223": {
+          "hide_name": 1,
+          "type": "AND2X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 14 ],
+            "Y": [ 18 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:371:parse_blif$224": {
+          "hide_name": 1,
+          "type": "NOR2X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 10 ],
+            "Y": [ 19 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:371:parse_blif$225": {
+          "hide_name": 1,
+          "type": "AOI22X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 18 ],
+            "C": [ 19 ],
+            "D": [ 2 ],
+            "Y": [ 20 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:371:parse_blif$226": {
+          "hide_name": 1,
+          "type": "NAND2X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 17 ],
+            "B": [ 20 ],
+            "Y": [ 12 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:371:parse_blif$227": {
+          "hide_name": 1,
+          "type": "AOI22X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 5 ],
+            "B": [ 15 ],
+            "C": [ 18 ],
+            "D": [ 7 ],
+            "Y": [ 21 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:371:parse_blif$228": {
+          "hide_name": 1,
+          "type": "AOI22X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 16 ],
+            "C": [ 19 ],
+            "D": [ 3 ],
+            "Y": [ 22 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:371:parse_blif$229": {
+          "hide_name": 1,
+          "type": "NAND2X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 21 ],
+            "B": [ 22 ],
+            "Y": [ 13 ]
+          }
+        }
+      },
+      "netnames": {
+        "$abc$218$n13": { 
+          "hide_name": 1,
+          "bits": [ 14 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n14": {
+          "hide_name": 1,
+          "bits": [ 15 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n15": {
+          "hide_name": 1,
+          "bits": [ 16 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n16": {
+          "hide_name": 1,
+          "bits": [ 17 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n17": {
+          "hide_name": 1,
+          "bits": [ 18 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n18": {
+          "hide_name": 1,
+          "bits": [ 19 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n19": {
+          "hide_name": 1,
+          "bits": [ 20 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n21": {
+          "hide_name": 1,
+          "bits": [ 21 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n22": {
+          "hide_name": 1,
+          "bits": [ 22 ],
+          "attributes": {
+          }
+        },
+        "a": {
+          "hide_name": 0,
+          "bits": [ 2, 3 ],
+          "attributes": {
+            "src": "verilog/mux4x1.v:1"
+          }
+        },
+        "b": {
+          "hide_name": 0,
+          "bits": [ 4, 5 ],
+          "attributes": {
+            "src": "verilog/mux4x1.v:1"
+          }
+        },
+        "c": {
+          "hide_name": 0,
+          "bits": [ 6, 7 ],
+          "attributes": {
+            "src": "verilog/mux4x1.v:1"
+          }
+        },
+        "d": {
+          "hide_name": 0,
+          "bits": [ 8, 9 ],
+          "attributes": {
+            "src": "verilog/mux4x1.v:1"
+          }
+        },
+        "sel": {
+          "hide_name": 0,
+          "bits": [ 10, 11 ],
+          "attributes": {
+            "src": "verilog/mux4x1.v:1"
+          }
+        },
+        "y": {
+          "hide_name": 0,
+          "bits": [ 12, 13 ],
+          "attributes": {
+            "src": "verilog/mux4x1.v:1"
+          }
+        }
+      }
+    }
+  }
+}

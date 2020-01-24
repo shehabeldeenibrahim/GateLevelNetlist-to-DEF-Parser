@@ -1,0 +1,418 @@
+{
+  "creator": "Yosys 0.8+319 (git sha1 db1a5ec6, gcc 7.3.0-27ubuntu1~18.04 -fPIC -Os)",
+  "modules": {
+    "mux4x1": {
+      "attributes": {
+        "cells_not_processed": 1,
+        "src": "verilog/mux4x1.gl.v:1"
+      },
+      "ports": {
+        "a": {
+          "direction": "input",
+          "bits": [ 2, 3 ]
+        },
+        "b": {
+          "direction": "input",
+          "bits": [ 4, 5 ]
+        },
+        "c": {
+          "direction": "input",
+          "bits": [ 6, 7 ]
+        },
+        "d": {
+          "direction": "input",
+          "bits": [ 8, 9 ]
+        },
+        "sel": {
+          "direction": "input",
+          "bits": [ 10, 11 ]
+        },
+        "y": {
+          "direction": "output",
+          "bits": [ 12, 13 ]
+        }
+      },
+      "cells": {
+        "AND2X2_1": {
+          "hide_name": 0,
+          "type": "AND2X2",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "verilog/mux4x1.gl.v:16"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 15 ],
+            "Y": [ 16 ]
+          }
+        },
+        "AND2X2_2": {
+          "hide_name": 0,
+          "type": "AND2X2",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "verilog/mux4x1.gl.v:23"
+          },
+          "connections": {
+            "A": [ 17 ],
+            "B": [ 18 ],
+            "Y": [ 19 ]
+          }
+        },
+        "AOI22X1_1": {
+          "hide_name": 0,
+          "type": "AOI22X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "verilog/mux4x1.gl.v:19"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 20 ],
+            "C": [ 5 ],
+            "D": [ 21 ],
+            "Y": [ 22 ]
+          }
+        },
+        "AOI22X1_2": {
+          "hide_name": 0,
+          "type": "AOI22X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "verilog/mux4x1.gl.v:24"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 20 ],
+            "C": [ 4 ],
+            "D": [ 21 ],
+            "Y": [ 23 ]
+          }
+        },
+        "BUFX2_1": {
+          "hide_name": 0,
+          "type": "BUFX2",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "verilog/mux4x1.gl.v:26"
+          },
+          "connections": {
+            "A": [ 24 ],
+            "Y": [ 12 ]
+          }
+        },
+        "BUFX2_2": {
+          "hide_name": 0,
+          "type": "BUFX2",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "verilog/mux4x1.gl.v:27"
+          },
+          "connections": {
+            "A": [ 25 ],
+            "Y": [ 13 ]
+          }
+        },
+        "INVX1_1": {
+          "hide_name": 0,
+          "type": "INVX1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "verilog/mux4x1.gl.v:14"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "Y": [ 26 ]
+          }
+        },
+        "NAND2X1_1": {
+          "hide_name": 0,
+          "type": "NAND2X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "verilog/mux4x1.gl.v:20"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ 22 ],
+            "Y": [ 25 ]
+          }
+        },
+        "NAND2X1_2": {
+          "hide_name": 0,
+          "type": "NAND2X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "verilog/mux4x1.gl.v:25"
+          },
+          "connections": {
+            "A": [ 19 ],
+            "B": [ 23 ],
+            "Y": [ 24 ]
+          }
+        },
+        "NAND3X1_1": {
+          "hide_name": 0,
+          "type": "NAND3X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "verilog/mux4x1.gl.v:13"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 11 ],
+            "C": [ 9 ],
+            "Y": [ 15 ]
+          }
+        },
+        "NAND3X1_2": {
+          "hide_name": 0,
+          "type": "NAND3X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "verilog/mux4x1.gl.v:15"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 7 ],
+            "C": [ 26 ],
+            "Y": [ 14 ]
+          }
+        },
+        "NAND3X1_3": {
+          "hide_name": 0,
+          "type": "NAND3X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "verilog/mux4x1.gl.v:21"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 11 ],
+            "C": [ 8 ],
+            "Y": [ 18 ]
+          }
+        },
+        "NAND3X1_4": {
+          "hide_name": 0,
+          "type": "NAND3X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "verilog/mux4x1.gl.v:22"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 6 ],
+            "C": [ 26 ],
+            "Y": [ 17 ]
+          }
+        },
+        "NOR2X1_1": {
+          "hide_name": 0,
+          "type": "NOR2X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "verilog/mux4x1.gl.v:17"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 11 ],
+            "Y": [ 20 ]
+          }
+        },
+        "NOR2X1_2": {
+          "hide_name": 0,
+          "type": "NOR2X1",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "verilog/mux4x1.gl.v:18"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 26 ],
+            "Y": [ 21 ]
+          }
+        }
+      },
+      "netnames": {
+        "_0_": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:13"
+          }
+        },
+        "_10_": {
+          "hide_name": 0,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:24"
+          }
+        },
+        "_11__0_": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:25"
+          }
+        },
+        "_11__1_": {
+          "hide_name": 0,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:20"
+          }
+        },
+        "_1_": {
+          "hide_name": 0,
+          "bits": [ 26 ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:14"
+          }
+        },
+        "_2_": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:15"
+          }
+        },
+        "_3_": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:16"
+          }
+        },
+        "_4_": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:17"
+          }
+        },
+        "_5_": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:18"
+          }
+        },
+        "_6_": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:19"
+          }
+        },
+        "_7_": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:21"
+          }
+        },
+        "_8_": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:22"
+          }
+        },
+        "_9_": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:23"
+          }
+        },
+        "a": {
+          "hide_name": 0,
+          "bits": [ 2, 3 ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:3"
+          }
+        },
+        "b": {
+          "hide_name": 0,
+          "bits": [ 4, 5 ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:4"
+          }
+        },
+        "c": {
+          "hide_name": 0,
+          "bits": [ 6, 7 ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:5"
+          }
+        },
+        "d": {
+          "hide_name": 0,
+          "bits": [ 8, 9 ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:6"
+          }
+        },
+        "gnd": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:11"
+          }
+        },
+        "sel": {
+          "hide_name": 0,
+          "bits": [ 10, 11 ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:7"
+          }
+        },
+        "vdd": {
+          "hide_name": 0,
+          "bits": [ "1" ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:10"
+          }
+        },
+        "y": {
+          "hide_name": 0,
+          "bits": [ 12, 13 ],
+          "attributes": {
+            "src": "verilog/mux4x1.gl.v:8"
+          }
+        }
+      }
+    }
+  }
+}
